@@ -36,7 +36,7 @@ static void activate(GtkApplication *app, gpointer user_data)
 		if(strlen(file)>=4)
 		{
 			strcpy(ext, file + strlen(file) - 3);
-			if(strcmp(ext, "gif")==0 || strcmp(ext, "jpg")==0)
+			if(strcmp(ext, "gif")==0 || strcmp(ext, "jpg")==0 || strcmp(ext, "png"))
 			{
 				image = gtk_image_new_from_file(file);
 				g_free(file);
@@ -50,6 +50,7 @@ static void activate(GtkApplication *app, gpointer user_data)
 		}
 		else 
 			gtk_widget_destroy(window);
+		free(file)
 	}
 	else	
 		gtk_widget_destroy(window);
@@ -62,7 +63,7 @@ int main(int argc, char **argv)
 	GtkApplication *app;
 	int status;
 
-	app = gtk_application_new("org.gtk.example", G_APPLICATION_FLAGS_NONE);
+	app = gtk_application_new("org.gnome.myapp", G_APPLICATION_FLAGS_NONE);
 	g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
 	status = g_application_run(G_APPLICATION(app), argc, argv);
 	g_object_unref(app);
