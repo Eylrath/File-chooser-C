@@ -1,0 +1,3 @@
+/home/elrath/Documents/C_prog/projekt/jpg_open/build/CMakeFiles/rebuild_cache.dir
+/home/elrath/Documents/C_prog/projekt/jpg_open/build/CMakeFiles/image-opener.dir
+/home/elrath/Documents/C_prog/projekt/jpg_open/build/CMakeFiles/edit_cache.dir
